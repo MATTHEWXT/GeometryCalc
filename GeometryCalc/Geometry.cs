@@ -5,7 +5,7 @@
         double CalculateArea();
     }
 
-    public interface ShapeProperties
+    public interface IShapeProperties
     {
         bool IsRightTriangle();
     }
@@ -14,7 +14,8 @@
     {
         public double CalculateShapeArea(IShape shape)
         {
-            if (shape == null) throw new ArgumentNullException(nameof(shape));
+            if (shape == null)
+                throw new ArgumentNullException(nameof(shape));
 
             return shape.CalculateArea();
         }
